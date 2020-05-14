@@ -1,0 +1,217 @@
+header{
+  position: relative;
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      .logo{
+        img{
+          max-width: 65px;
+        }
+      }
+      .contact{
+        a{
+          margin-right: 30px;
+          i{
+            font-size: 20px;
+            color: #e31e24;
+          }
+          span{
+            display: none;
+          }
+        }
+        .nav{
+          background: none;
+          border: none;
+          opacity: 1;
+          transition: 1s;
+          i{
+            color: #000000;
+            font-size: 20px;
+          }
+        }
+        .nav-none{
+          opacity: 0;
+        }
+      }
+      nav{
+        position: absolute;
+        transform: translate(-200%, 0);
+        top: 0;
+        background: #ffffff;
+        padding: 25px 60px 25px 25px;
+        transition: 1s;
+        .close-nav{
+          position: absolute;
+          right: -50px;
+          z-index: 505;
+          font-size: 16px;
+          color: #ffffff;
+          background: none;
+          border: none;
+        }
+        ul{
+          li{
+            margin-bottom: 20px;
+            a{
+              font-size: 16px;
+              color: #34353a;
+            }
+          }
+        }
+      }
+      .open-nav{
+        transform: translate(0,0);
+        z-index: 505;
+        left: 0;
+      }
+    }
+}
+
+@media (min-width: 768px) {
+  header{
+    .header{
+      align-items: flex-start;
+      .logo{
+        img{
+          max-width: 75px;
+        }
+      }
+      nav{
+        padding-top: 15px;
+        transform: translate(0,0);
+        position: relative;
+        padding: 0;
+        .close-nav{
+          display: none;
+        }
+        ul{
+          display: flex;
+          align-items: center;
+          li{
+            margin-bottom: 0;
+            &:not(:last-of-type){
+              margin-right: 13px;
+            }
+            a{
+              font-size: 12px;
+              padding-bottom: 5px;
+              position: relative;
+              &:before{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color:  #e31e24;
+                content: '';
+                transition: 0.5s;
+              }
+              &:hover{
+                &:before{
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contact{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        a{
+          margin-right: 0;
+          &:first-of-type{
+            margin-bottom: 10px;
+          }
+          i{
+            font-size: 16px;
+          }
+        }
+        .nav{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  header{
+    .header{
+      nav{
+        ul{
+          li{
+            a{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .contact{
+        padding-top: 15px;
+        a{
+          display: flex;
+          align-items: center;
+          i{
+            margin-right: 5px;
+          }
+          span{
+            display: block;
+            color: #34353a;
+            font-family: Roboto;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  header{
+    .header{
+      max-width: 1235px;
+      margin: 0 auto;
+      nav{
+        ul{
+          width: 800px;
+          max-width: 100%;
+          justify-content: space-between;
+          li{
+            &:not(:last-of-type){
+              margin-right: 0;
+            }
+            a{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px){
+  header{
+    .header{
+      nav{
+        ul{
+          width: 900px;
+        }
+      }
+      .contact{
+        a{
+          i{
+            margin-right: 10px;
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

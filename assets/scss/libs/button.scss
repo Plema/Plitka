@@ -1,0 +1,52 @@
+.parallel{
+  margin: 0 auto;
+  width: 204px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  display: block;
+  position: relative;
+  span{
+    z-index: 10;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+  }
+  &:before{
+    transform: skew(150deg);
+    width: 204px;
+    height: 42px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    border: 2px solid transparent;
+    transition: 0.5s;
+  }
+  &:hover{
+    &:before{
+      border-color: #ffffff;
+      transform: skew(180deg);
+    }
+  }
+}
+
+.green-par{
+  &:before{
+    background-color: #269b4e;
+  }
+}
+
+.yellow-par{
+  &:before{
+    background-color: #ffbc00;
+  }
+}
+
+.red-par{
+  &:before{
+    background-color: #e31e24;
+  }
+}

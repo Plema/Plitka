@@ -1,0 +1,166 @@
+.three-banners{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  .one-banner{
+    width: 100%;
+    .some-head{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    .main-content{
+      padding-top: 80px;
+      padding-bottom: 170px;
+      text-align: center;
+      min-height: 628px;
+      h1{
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+      }
+      h4{
+        margin: 0 auto;
+        max-width: 550px;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 50px;
+        padding: 0 10px;
+      }
+      h6{
+        margin: 0 auto;
+        max-width: 470px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 50px;
+        padding: 0 5px;
+      }
+    }
+    .green{
+      background: url('/img/1ban.png') no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
+    .yellow{
+      background: url('/img/3ban.png') no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
+    .red{
+      background: url('/img/2ban.png') no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
+  }
+  .red-ban{
+    .main-content{
+      padding-top: 50px;
+      h4{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 375px) {
+  .three-banners{
+    .one-banner{
+      .main-content{
+        min-height: 555px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .three-banners{
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    .one-banner{
+      .some-head{
+        min-height: 105px;
+      }
+      .main-content{
+        min-height: 670px;
+        h1{
+          padding: 0 10px;
+        }
+        h4{
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .three-banners{
+    .one-banner{
+      .main-content{
+        min-height: 660px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  .three-banners{
+    .one-banner{
+      .some-head{
+        min-height: 115px;
+      }
+      .main-content{
+        padding-top: 150px;
+        h4{
+          max-width: 500px;
+          margin: 0 auto;
+          margin-bottom: 50px;
+          padding: 0 15px;
+        }
+        h6{
+          max-width: 500px;
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+      }
+    }
+    .red-ban{
+      .main-content{
+        padding-top: 120px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px){
+  .three-banners{
+    .one-banner{
+      .main-content{
+        min-height: 785px;
+        padding-top: 190px;
+        h1{
+          font-size: 38px;
+          margin-bottom: 50px;
+        }
+        h4{
+          font-size: 30px;
+        }
+        h6{
+          font-size: 20px;
+        }
+      }
+    }
+    .red-ban{
+      .main-content{
+        padding-top: 130px;
+      }
+    }
+  }
+}
