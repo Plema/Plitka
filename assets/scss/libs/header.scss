@@ -193,13 +193,27 @@ header{
     }
   }
 }
-
+@media (min-width: 1400px) {
+  header{
+    .header{
+      padding-top: 20px;
+      padding-bottom: 25px;
+      nav{
+        padding-top: 20px;
+      }
+      .contact{
+        padding-top: 20px;
+        margin-left: 35px;
+      }
+    }
+  }
+}
 @media (min-width: 1600px){
   header{
     .header{
       nav{
         ul{
-          width: 900px;
+          width: 890px;
         }
       }
       .contact{
