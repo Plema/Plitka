@@ -1,11 +1,20 @@
 $(document).ready(function(){
   
     $( ".nav" ).click(function() {
-      $('nav').stop().toggleClass('open-nav');
-      $('.nav').stop().toggleClass('nav-none');
+      $('nav').stop().addClass('open-nav');
+      $('.nav').stop().addClass('nav-none');
       $('.back-dark').stop().toggleClass('back-dark-open'); 
       $('body').css('overflow','hidden');
     });
+
+    
+   $( "nav > ul > li" ).click(function() {
+    $('nav').removeClass('open-nav');
+    $('.nav').stop().removeClass('nav-none');
+    $('.back-dark').removeClass('back-dark-open'); 
+    $('body').css('overflow','auto');
+    console.log('open')
+ });
 
     $( ".close-nav" ).click(function() {
       $('nav').stop().removeClass('open-nav');
@@ -46,4 +55,20 @@ $(document).ready(function(){
       $('.back-dark').stop().removeClass('back-dark-open'); 
       $('body').css('overflow','visible');
     });
+
+    $( ".send" ).click(function(e) {
+      e.preventDefault();
+      var a = $('#name').val();
+      var b = $('#phone').val();
+      // var c = $('#check');
+      // console.log(c);
+      if((a === "") || (b === "")){
+       alert('Заполните форму')
+      }
+      else{
+       $('.back-dark').removeClass('back-dark-open'); 
+       $('.request-call').removeClass('open-pop'); 
+       $('body').css('overflow','hidden'); 
+      }
+  });
 });
