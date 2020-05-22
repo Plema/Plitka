@@ -304,6 +304,15 @@
     width: 100%;
     height: 440px;
   }
+  .ymaps-2-1-76-searchbox__normal-layout{
+    margin-top: 40px;
+  }
+  .ymaps-2-1-76-controls__control_toolbar{
+    margin-top: 40px;
+  }
+  .ymaps-2-1-76-search_layout_panel{
+    margin-top: 40px;
+  }
 }
 .collection{
   overflow: hidden;
@@ -1240,12 +1249,22 @@
 @media (min-width: 1860px){
   .top-banner{
     &:before{
-      bottom: 88px;
+      bottom: 85px;
     }
   }
   .what-we-do{
     &:before{
       height: 85%;
+    }
+    .aft{
+      display: block;
+      position: absolute;
+      background: #d8d8dd;
+      height: 20px;
+      width: 6px;
+      content: '';
+      top: 27.5px;
+      left: 17%;
     }
   }
 }

@@ -3,66 +3,72 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  .one-banner{
+  .one{
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    .some-head{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px 0;
-    }
-    .main-content{
-      padding-top: 80px;
-      padding-bottom: 170px;
-      text-align: center;
-      min-height: 628px;
-      h1{
-        color: #ffffff;
-        font-size: 25px;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 60px;
+    .one-banner{
+      width: 100%;
+      .some-head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
       }
-      h4{
-        margin: 0 auto;
-        max-width: 550px;
-        color: #ffffff;
-        font-size: 22px;
-        font-weight: 400;
-        margin-bottom: 50px;
-        padding: 0 10px;
+      .main-content{
+        padding-top: 80px;
+        padding-bottom: 170px;
+        text-align: center;
+        min-height: 628px;
+        h1{
+          color: #ffffff;
+          font-size: 21px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 60px;
+        }
+        h4{
+          margin: 0 auto;
+          max-width: 550px;
+          color: #ffffff;
+          font-size: 22px;
+          font-weight: 400;
+          margin-bottom: 50px;
+          padding: 0 10px;
+        }
+        h6{
+          margin: 0 auto;
+          max-width: 470px;
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 50px;
+          padding: 0 5px;
+        }
       }
-      h6{
-        margin: 0 auto;
-        max-width: 470px;
-        color: #ffffff;
-        font-size: 18px;
-        font-weight: 400;
-        margin-bottom: 50px;
-        padding: 0 5px;
+      .green{
+        background: url('../img/1ban.png') no-repeat;
+        background-size: cover;
+        background-position: 50%;
+      }
+      .yellow{
+        background: url('../img/3ban.png') no-repeat;
+        background-size: cover;
+        background-position: 50%;
+      }
+      .red{
+        background: url('../img/2ban.png') no-repeat;
+        background-size: cover;
+        background-position: 50%;
       }
     }
-    .green{
-      background: url('../img/1ban.png') no-repeat;
-      background-size: cover;
-      background-position: 50%;
-    }
-    .yellow{
-      background: url('../img/3ban.png') no-repeat;
-      background-size: cover;
-      background-position: 50%;
-    }
-    .red{
-      background: url('../img/2ban.png') no-repeat;
-      background-size: cover;
-      background-position: 50%;
-    }
-  }
-  .red-ban{
-    .main-content{
-      padding-top: 50px;
-      h4{
-        margin-bottom: 20px;
+    .red-ban{
+      .main-content{
+        padding-top: 50px;
+        h4{
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -71,9 +77,11 @@
 
 @media (min-width: 375px) {
   .three-banners{
-    .one-banner{
-      .main-content{
-        min-height: 555px;
+    .one{
+      .one-banner{
+        .main-content{
+          min-height: 555px;
+        }
       }
     }
   }
@@ -83,17 +91,43 @@
   .three-banners{
     flex-wrap: nowrap;
     align-items: flex-start;
-    .one-banner{
-      .some-head{
-        min-height: 105px;
+    .one{
+      &:before{
+        content: '';
+        width: 85%;
+        height: 15px;
+        position: absolute;
+        left: -5px;
+        bottom: 26px;
+        transform: rotate(4.95deg);
       }
-      .main-content{
-        min-height: 670px;
-        h1{
-          padding: 0 10px;
+      &:first-of-type{
+        &:before{
+          background: #269b4e;
         }
-        h4{
-          padding: 0 5px;
+      }
+      &:nth-child(2){
+        &:before{
+          background: #f50000 ;
+        }
+      }
+      &:last-of-type{
+        &:before{
+          background: #ffbc00;
+        }
+      }
+      .one-banner{
+        .some-head{
+          min-height: 105px;
+        }
+        .main-content{
+          min-height: 670px;
+          h1{
+            padding: 0 10px;
+          }
+          h4{
+            padding: 0 5px;
+          }
         }
       }
     }
@@ -102,9 +136,11 @@
 
 @media (min-width: 1024px){
   .three-banners{
-    .one-banner{
-      .main-content{
-        min-height: 660px;
+    .one{
+      .one-banner{
+        .main-content{
+          min-height: 660px;
+        }
       }
     }
   }
@@ -112,28 +148,33 @@
 
 @media (min-width: 1280px){
   .three-banners{
-    .one-banner{
-      .some-head{
-        min-height: 115px;
+    .one{
+      &:before{
+        bottom: 27px;
       }
-      .main-content{
-        padding-top: 150px;
-        h4{
-          max-width: 500px;
-          margin: 0 auto;
-          margin-bottom: 50px;
-          padding: 0 15px;
+      .one-banner{
+        .some-head{
+          min-height: 120px;
         }
-        h6{
-          max-width: 500px;
-          margin: 0 auto;
-          margin-bottom: 50px;
+        .main-content{
+          padding-top: 150px;
+          h4{
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            padding: 0;
+          }
+          h6{
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
         }
       }
-    }
-    .red-ban{
-      .main-content{
-        padding-top: 120px;
+      .red-ban{
+        .main-content{
+          padding-top: 120px;
+        }
       }
     }
   }
@@ -141,25 +182,51 @@
 
 @media (min-width: 1400px){
   .three-banners{
-    .one-banner{
-      .main-content{
-        min-height: 785px;
-        padding-top: 190px;
-        h1{
-          font-size: 38px;
-          margin-bottom: 50px;
+    .one{
+      &:before{
+        bottom: 32px;
+        transform: rotate(4.85deg);
+      }
+      .one-banner{
+        .main-content{
+          min-height: 785px;
+          padding-top: 190px;
+          h1{
+            font-size: 38px;
+            margin-bottom: 50px;
+          }
+          h4{
+            font-size: 30px;
+            line-height: 36px;
+          }
+          h6{
+            font-size: 20px;
+          }
         }
-        h4{
-          font-size: 30px;
-        }
-        h6{
-          font-size: 20px;
+      }
+      .red-ban{
+        .main-content{
+          padding-top: 150px;
+          h1{
+            margin-bottom: 55px;
+          }
+          h4{
+            margin-bottom: 15px;
+          }
+          h6{
+            margin-bottom: 100px;
+          }
         }
       }
     }
-    .red-ban{
-      .main-content{
-        padding-top: 130px;
+  }
+}
+
+@media (min-width: 1600px){
+  .three-banners{
+    .one{
+      &:before{
+        bottom: 33px;
       }
     }
   }
