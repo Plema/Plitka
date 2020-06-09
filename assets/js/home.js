@@ -31,15 +31,6 @@ $(document).ready(function(){
       $('.popUp').stop().removeClass('open-pop');
     });
 
-    // $( ".one-tekstura" ).click(function() {
-    //   $('.one-tekstura').stop().removeClass('changed');
-    //   $(this).stop().toggleClass('changed');
-    //   $('.one-plitka').stop().toggleClass('open-pop');
-    //   $('.back-dark').stop().toggleClass('back-dark-open'); 
-    //   $('body').css('overflow','hidden');
-    // });
-
-
     $( ".one-sub" ).click(function() {
       $('.one-plitka').stop().toggleClass('open-pop');
       $('.back-dark').stop().toggleClass('back-dark-open'); 
