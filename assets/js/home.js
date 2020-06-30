@@ -9,12 +9,12 @@ $(document).ready(function(){
 
     
    $( "nav > ul > li" ).click(function() {
-    $('nav').removeClass('open-nav');
-    $('.nav').stop().removeClass('nav-none');
-    $('.back-dark').removeClass('back-dark-open'); 
-    $('body').css('overflow','auto');
-    console.log('open')
- });
+      $('nav').removeClass('open-nav');
+      $('.nav').stop().removeClass('nav-none');
+      $('.back-dark').removeClass('back-dark-open'); 
+      $('body').css('overflow','auto');
+      console.log('open')
+    });
 
     $( ".close-nav" ).click(function() {
       $('nav').stop().removeClass('open-nav');

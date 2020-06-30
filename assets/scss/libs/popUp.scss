@@ -125,6 +125,12 @@
     overflow-y: scroll;
   }
 }
+.thanks{
+  max-width: 300px;
+  p{
+    text-align: center;
+  }
+}
 
 @media (min-width: 768px) {
   .popUp{
@@ -168,6 +174,9 @@
       }
     }
   }
+  .thanks{
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -198,6 +207,9 @@
       }
     }
   }
+  .thanks{
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -222,5 +234,8 @@
         }
       }
     }
+  }
+  .thanks{
+    max-width: 500px;
   }
 }
